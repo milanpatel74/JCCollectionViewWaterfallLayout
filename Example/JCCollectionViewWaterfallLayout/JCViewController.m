@@ -40,6 +40,7 @@ static NSString * const reuseCellId = @"cellId";
     self.layout = (JCCollectionViewWaterfallLayout *)self.collectionView.collectionViewLayout;
     self.layout.headerHeight = 30.0f;
     self.layout.footerHeight = 30.0f;
+//    self.layout.columnCount = 3;
     
     self.pictures = [[NSMutableArray alloc] initWithCapacity:10];
     
@@ -82,6 +83,16 @@ static NSString * const reuseCellId = @"cellId";
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.pictures.count;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout columnCountForSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 2;
+    }
+    else {
+        return 3;
+    }
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath

@@ -49,11 +49,14 @@
     self.minimumLineSpacing = 5.0f;
     self.sectionInset = UIEdgeInsetsMake(5.0f, 5.0f, 5.0f, 5.0f);
     
-    self.columnCount = 2;
-    self.headerHeight = 0.0f;
-    self.footerHeight = 0.0f;
-    self.itemAttributes = [[NSMutableArray alloc] initWithCapacity:10];
-    self.supplementaryAttributes = [[NSMutableArray alloc] initWithCapacity:10];
+    _columnCount = 2;
+    _itemAttributes = [NSMutableArray array];
+    _supplementaryAttributes = [NSMutableArray array];
+}
+
+- (void)setColumnCount:(NSInteger)columnCount
+{
+    _columnCount = columnCount;
     
     CGFloat itemWidth = ([UIScreen mainScreen].bounds.size.width-self.sectionInset.left-self.sectionInset.right-(self.columnCount-1)*self.minimumInteritemSpacing)/self.columnCount;
     
@@ -194,61 +197,55 @@
 - (NSInteger)columnCountForSection:(NSInteger)section
 {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:columnCountForSection:)]) {
-        return [self.delegate collectionView:self.collectionView layout:self columnCountForSection:section];
+        self.columnCount = [self.delegate collectionView:self.collectionView layout:self columnCountForSection:section];
     }
-    else {
-        return self.columnCount;
-    }
+    
+    return self.columnCount;
 }
 
 - (CGFloat)headerHeightForSection:(NSInteger)section
 {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:heightForHeaderInSection:)]) {
-        return [self.delegate collectionView:self.collectionView layout:self heightForHeaderInSection:section];
+        self.headerHeight = [self.delegate collectionView:self.collectionView layout:self heightForHeaderInSection:section];
     }
-    else {
-        return self.headerHeight;
-    }
+    
+    return self.headerHeight;
 }
 
 - (CGFloat)footerHeightForSection:(NSInteger)section
 {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:heightForFooterInSection:)]) {
-        return [self.delegate collectionView:self.collectionView layout:self heightForFooterInSection:section];
+        self.footerHeight = [self.delegate collectionView:self.collectionView layout:self heightForFooterInSection:section];
     }
-    else {
-        return self.footerHeight;
-    }
+    
+    return self.footerHeight;
 }
 
 - (UIEdgeInsets)sectionInsetForSection:(NSInteger)section
 {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:insetForSectionAtIndex:)]) {
-        return [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:section];
+        self.sectionInset = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:section];
     }
-    else {
-        return self.sectionInset;
-    }
+    
+    return self.sectionInset;
 }
 
 - (CGFloat)minimumInteritemSpacingForSection:(NSInteger)section
 {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:minimumInteritemSpacingForSectionAtIndex:)]) {
-        return [self.delegate collectionView:self.collectionView layout:self minimumInteritemSpacingForSectionAtIndex:section];
+        self.minimumInteritemSpacing = [self.delegate collectionView:self.collectionView layout:self minimumInteritemSpacingForSectionAtIndex:section];
     }
-    else {
-        return self.minimumInteritemSpacing;
-    }
+    
+    return self.minimumInteritemSpacing;
 }
 
 - (CGFloat)minimumLineSpacingForSection:(NSInteger)section
 {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:minimumLineSpacingForSectionAtIndex:)]) {
-        return [self.delegate collectionView:self.collectionView layout:self minimumLineSpacingForSectionAtIndex:section];
+        self.minimumLineSpacing = [self.delegate collectionView:self.collectionView layout:self minimumLineSpacingForSectionAtIndex:section];
     }
-    else {
-        return self.minimumLineSpacing;
-    }
+    
+    return self.minimumLineSpacing;
 }
 
 - (CGSize)itemSizeForIndexPath:(NSIndexPath *)indexPath
@@ -256,11 +253,10 @@
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:sizeForItemAtIndexPath:)]) {
         CGSize size = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
         
-        return CGSizeMake(self.itemSize.width, floorf(size.height * self.itemSize.width / size.width));
+        self.itemSize = CGSizeMake(self.itemSize.width, floorf(size.height * self.itemSize.width / size.width));
     }
-    else {
-        return self.itemSize;
-    }
+    
+    return self.itemSize;
 }
 
 @end
