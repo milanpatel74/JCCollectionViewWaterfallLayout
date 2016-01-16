@@ -51,7 +51,7 @@ static NSString * const reuseCellId = @"cellId";
 {
     [self.activityView startAnimating];
     
-    NSString *url = [@"http://image.haosou.com/j?q=banana&pn=20" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *url = [@"http://image.haosou.com/j?q=beijing&pn=20" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

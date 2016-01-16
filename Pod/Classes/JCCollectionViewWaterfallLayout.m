@@ -54,15 +54,6 @@
     _supplementaryAttributes = [NSMutableArray array];
 }
 
-- (void)setColumnCount:(NSInteger)columnCount
-{
-    _columnCount = columnCount;
-    
-    CGFloat itemWidth = ([UIScreen mainScreen].bounds.size.width-self.sectionInset.left-self.sectionInset.right-(self.columnCount-1)*self.minimumInteritemSpacing)/self.columnCount;
-    
-    self.itemSize = CGSizeMake(itemWidth, itemWidth);
-}
-
 #pragma mark -
 
 - (void)prepareLayout
@@ -250,6 +241,10 @@
 
 - (CGSize)itemSizeForIndexPath:(NSIndexPath *)indexPath
 {
+    CGFloat itemWidth = ([UIScreen mainScreen].bounds.size.width-self.sectionInset.left-self.sectionInset.right-(self.columnCount-1)*self.minimumInteritemSpacing)/self.columnCount;
+    
+    self.itemSize = CGSizeMake(itemWidth, itemWidth);
+    
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:sizeForItemAtIndexPath:)]) {
         CGSize size = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
         
