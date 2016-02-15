@@ -11,4 +11,3 @@ osx_image: xcode7
 # - pod install --project-directory=Example
 script:
 - set -o pipefail && xcodebuild test -workspace Example/JCCollectionViewWaterfallLayout.xcworkspace -scheme JCCollectionViewWaterfallLayout-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint --no-clean
