@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E61ED25BDDC7A313F4282E70'
+               BlueprintIdentifier = 'B420C725B8A6EAF96791B0E6'
                BlueprintName = 'JCCollectionViewWaterfallLayout'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libJCCollectionViewWaterfallLayout.a'>

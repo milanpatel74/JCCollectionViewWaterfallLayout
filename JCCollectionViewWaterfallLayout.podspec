@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'JCCollectionViewWaterfallLayout' => ['Pod/Assets/*.png']
   }
-  s.dependency 'AFNetworking', '~> 2.6.0'
+  s.dependency 'AFNetworking', '~> 3.0.4'
 end
