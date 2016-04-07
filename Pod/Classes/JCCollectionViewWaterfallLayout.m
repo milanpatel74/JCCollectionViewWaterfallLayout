@@ -178,8 +178,8 @@
 
 - (id<JCCollectionViewWaterfallLayoutDelegate>)delegate
 {
-    if (_delegate == nil) {
-        _delegate =  (id<JCCollectionViewWaterfallLayoutDelegate>)self.collectionView.delegate;
+    if (!_delegate) {
+        _delegate = (id<JCCollectionViewWaterfallLayoutDelegate>)self.collectionView.delegate;
     }
     
     return _delegate;
