@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "JCCollectionViewWaterfallLayout"
-  s.version          = "0.0.5"
+  s.version          = "0.0.6"
   s.summary          = "Support multiple section, and can add headerView and footerView."
   s.homepage         = "http://lijingcheng.github.io/"
   s.license          = 'MIT'
@@ -22,5 +22,4 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'JCCollectionViewWaterfallLayout' => ['Pod/Assets/*.png']
   }
-  s.dependency 'AFNetworking', '~> 3.0.4'
 end

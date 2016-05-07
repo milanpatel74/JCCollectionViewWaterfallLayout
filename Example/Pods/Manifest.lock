@@ -14,10 +14,10 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
-  - JCCollectionViewWaterfallLayout (0.0.4):
-    - AFNetworking (~> 3.0.4)
+  - JCCollectionViewWaterfallLayout (0.0.6)
 
 DEPENDENCIES:
+  - AFNetworking (= 3.0.4)
   - JCCollectionViewWaterfallLayout (from `../`)
 
 EXTERNAL SOURCES:
@@ -26,6 +26,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
-  JCCollectionViewWaterfallLayout: 017fda3b941079affeb11ef395ac098bc9678011
+  JCCollectionViewWaterfallLayout: 213bcbaf0473d7d3a866847fdf83f7e5496abce4
 
 COCOAPODS: 0.39.0
