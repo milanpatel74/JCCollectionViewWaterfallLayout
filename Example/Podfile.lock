@@ -26,7 +26,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
-  JCCollectionViewWaterfallLayout: 56f90ad0077f688667cfb7985a6cd5970bda20e0
+  JCCollectionViewWaterfallLayout: ae967a801c258e40e03471cea6bafe4e28f19875
 
 PODFILE CHECKSUM: b411e1959628ca8b49fa6c4cc46067c113a257d9
 
