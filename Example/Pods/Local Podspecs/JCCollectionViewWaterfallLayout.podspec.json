@@ -1,6 +1,6 @@
 {
   "name": "JCCollectionViewWaterfallLayout",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "summary": "Support multiple section, and can add headerView and footerView.",
   "homepage": "http://lijingcheng.github.io/",
   "license": "MIT",
@@ -9,11 +9,11 @@
   },
   "source": {
     "git": "https://github.com/lijingcheng/JCCollectionViewWaterfallLayout.git",
-    "tag": "0.0.6"
+    "tag": "0.0.7"
   },
   "social_media_url": "http://weibo.com/lijingcheng1984",
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",

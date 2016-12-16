@@ -10,13 +10,11 @@
 
 @implementation JCCollectionHeaderView
 
-- (void)awakeFromNib
-{
-    
+- (void)awakeFromNib {
+    [super awakeFromNib];
 }
 
-- (void)prepareForReuse
-{
+- (void)prepareForReuse {
     [super prepareForReuse];
     
     self.titleLabel.text = @"";

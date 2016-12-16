@@ -9,14 +9,14 @@
 
 Pod::Spec.new do |s|
   s.name             = "JCCollectionViewWaterfallLayout"
-  s.version          = "0.0.6"
+  s.version          = "0.0.7"
   s.summary          = "Support multiple section, and can add headerView and footerView."
   s.homepage         = "http://lijingcheng.github.io/"
   s.license          = 'MIT'
   s.author           = { "lijingcheng" => "bj_lijingcheng@163.com" }
   s.source           = { :git => "https://github.com/lijingcheng/JCCollectionViewWaterfallLayout.git", :tag => s.version.to_s }
   s.social_media_url = 'http://weibo.com/lijingcheng1984'
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {

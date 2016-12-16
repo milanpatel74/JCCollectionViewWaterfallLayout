@@ -30,8 +30,7 @@ static NSString * const reuseHeaderId = @"headerId";
 static NSString * const reuseFooterId = @"footerId";
 static NSString * const reuseCellId = @"cellId";
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     self.activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -47,8 +46,7 @@ static NSString * const reuseCellId = @"cellId";
     [self requestPictures];
 }
 
-- (void)requestPictures
-{
+- (void)requestPictures {
     [self.activityView startAnimating];
     
     NSString *url = [@"http://image.haosou.com/j?q=beijing&pn=20" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -72,18 +70,15 @@ static NSString * const reuseCellId = @"cellId";
 
 #pragma mark - UICollectionViewDelegate & UICollectionViewDataSource 
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 2;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.pictures.count;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout columnCountForSection:(NSInteger)section
-{
+- (NSInteger)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout columnCountForSection:(NSInteger)section {
     if (section == 0) {
         return 2;
     }
@@ -92,8 +87,7 @@ static NSString * const reuseCellId = @"cellId";
     }
 }
 
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if([kind isEqual:UICollectionElementKindSectionHeader]){
         JCCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:reuseHeaderId forIndexPath:indexPath];
         headerView.titleLabel.text = @"===== header =====";
@@ -108,15 +102,13 @@ static NSString * const reuseCellId = @"cellId";
     }
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *dict = self.pictures[indexPath.row];
     
     return CGSizeMake([dict[@"width"] floatValue], [dict[@"height"] floatValue]);
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     JCCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseCellId forIndexPath:indexPath];
     [cell.imageView setImageWithURL:[NSURL URLWithString:self.pictures[indexPath.row][@"img"]]];
     

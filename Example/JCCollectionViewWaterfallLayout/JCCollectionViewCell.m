@@ -10,13 +10,11 @@
 
 @implementation JCCollectionViewCell
 
-- (void)awakeFromNib
-{
-    
+- (void)awakeFromNib {
+    [super awakeFromNib];
 }
 
-- (void)prepareForReuse
-{
+- (void)prepareForReuse {
     [super prepareForReuse];
     
     self.imageView.image = nil;

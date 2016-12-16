@@ -21,30 +21,23 @@
 
 @implementation JCCollectionViewWaterfallLayout
 
-- (id)init
-{
-    self = [super init];
-    
-    if (self) {
+- (id)init {
+    if (self = [super init]) {
         [self setup];
     }
     
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self) {
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
         [self setup];
     }
     
     return self;
 }
 
-- (void)setup
-{
+- (void)setup {
     self.minimumInteritemSpacing = 5.0f;
     self.minimumLineSpacing = 5.0f;
     self.sectionInset = UIEdgeInsetsMake(5.0f, 5.0f, 5.0f, 5.0f);
@@ -56,8 +49,7 @@
 
 #pragma mark -
 
-- (void)prepareLayout
-{
+- (void)prepareLayout {
     self.contentHeight = 0;
     [self.itemAttributes removeAllObjects];
     [self.supplementaryAttributes removeAllObjects];
@@ -135,20 +127,17 @@
     }
 }
 
-- (CGSize)collectionViewContentSize
-{
+- (CGSize)collectionViewContentSize {
     return CGSizeMake(self.collectionView.frame.size.width, self.contentHeight);
 }
 
-- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
-{
+- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     return [self.itemAttributes filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(UICollectionViewLayoutAttributes *evaluatedObject, NSDictionary *bindings) {
         return CGRectIntersectsRect(rect, evaluatedObject.frame);
     }]];
 }
 
-- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger index = indexPath.item;
     
     for (NSInteger section = 0; section < indexPath.section; section++) {
@@ -158,13 +147,11 @@
     return self.itemAttributes[index];
 }
 
-- (UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     return self.supplementaryAttributes[indexPath.section][kind];
 }
 
-- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
-{
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     CGRect oldBounds = self.collectionView.bounds;
     
     if (CGRectGetWidth(newBounds) != CGRectGetWidth(oldBounds)) {
@@ -176,8 +163,7 @@
 
 #pragma mark -
 
-- (id<JCCollectionViewWaterfallLayoutDelegate>)delegate
-{
+- (id<JCCollectionViewWaterfallLayoutDelegate>)delegate {
     if (!_delegate) {
         _delegate = (id<JCCollectionViewWaterfallLayoutDelegate>)self.collectionView.delegate;
     }
@@ -185,8 +171,7 @@
     return _delegate;
 }
 
-- (NSInteger)columnCountForSection:(NSInteger)section
-{
+- (NSInteger)columnCountForSection:(NSInteger)section {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:columnCountForSection:)]) {
         self.columnCount = [self.delegate collectionView:self.collectionView layout:self columnCountForSection:section];
     }
@@ -194,8 +179,7 @@
     return self.columnCount;
 }
 
-- (CGFloat)headerHeightForSection:(NSInteger)section
-{
+- (CGFloat)headerHeightForSection:(NSInteger)section {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:heightForHeaderInSection:)]) {
         self.headerHeight = [self.delegate collectionView:self.collectionView layout:self heightForHeaderInSection:section];
     }
@@ -203,8 +187,7 @@
     return self.headerHeight;
 }
 
-- (CGFloat)footerHeightForSection:(NSInteger)section
-{
+- (CGFloat)footerHeightForSection:(NSInteger)section {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:heightForFooterInSection:)]) {
         self.footerHeight = [self.delegate collectionView:self.collectionView layout:self heightForFooterInSection:section];
     }
@@ -212,8 +195,7 @@
     return self.footerHeight;
 }
 
-- (UIEdgeInsets)sectionInsetForSection:(NSInteger)section
-{
+- (UIEdgeInsets)sectionInsetForSection:(NSInteger)section {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:insetForSectionAtIndex:)]) {
         self.sectionInset = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:section];
     }
@@ -221,8 +203,7 @@
     return self.sectionInset;
 }
 
-- (CGFloat)minimumInteritemSpacingForSection:(NSInteger)section
-{
+- (CGFloat)minimumInteritemSpacingForSection:(NSInteger)section {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:minimumInteritemSpacingForSectionAtIndex:)]) {
         self.minimumInteritemSpacing = [self.delegate collectionView:self.collectionView layout:self minimumInteritemSpacingForSectionAtIndex:section];
     }
@@ -230,8 +211,7 @@
     return self.minimumInteritemSpacing;
 }
 
-- (CGFloat)minimumLineSpacingForSection:(NSInteger)section
-{
+- (CGFloat)minimumLineSpacingForSection:(NSInteger)section {
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:minimumLineSpacingForSectionAtIndex:)]) {
         self.minimumLineSpacing = [self.delegate collectionView:self.collectionView layout:self minimumLineSpacingForSectionAtIndex:section];
     }
@@ -239,8 +219,7 @@
     return self.minimumLineSpacing;
 }
 
-- (CGSize)itemSizeForIndexPath:(NSIndexPath *)indexPath
-{
+- (CGSize)itemSizeForIndexPath:(NSIndexPath *)indexPath {
     CGFloat itemWidth = ([UIScreen mainScreen].bounds.size.width-self.sectionInset.left-self.sectionInset.right-(self.columnCount-1)*self.minimumInteritemSpacing)/self.columnCount;
     
     self.itemSize = CGSizeMake(itemWidth, itemWidth);
