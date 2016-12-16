@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "JCCollectionViewWaterfallLayout"
-  s.version          = "0.0.8"
+  s.version          = "1.0.0"
   s.summary          = "Support multiple section, and can add headerView and footerView."
   s.homepage         = "http://lijingcheng.github.io/"
   s.license          = 'MIT'
