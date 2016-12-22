@@ -44,6 +44,8 @@ static NSString * const reuseCellId = @"cellId";
     self.pictures = [[NSMutableArray alloc] initWithCapacity:10];
     
     [self requestPictures];
+    
+    NSLog(@"\n\n🍀🍀🍀 The warnings in the console can be ignored, the actual use of lib will not exist. 🍀🍀🍀");
 }
 
 - (void)requestPictures {
