@@ -26,6 +26,10 @@
 		F302E1DB1B20542200C5F6D3 /* JCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F302E1DA1B20542200C5F6D3 /* JCCollectionViewCell.m */; };
 		F302E1DE1B205A6800C5F6D3 /* JCCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F302E1DD1B205A6800C5F6D3 /* JCCollectionHeaderView.m */; };
 		F302E1E11B205A7C00C5F6D3 /* JCCollectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F302E1E01B205A7C00C5F6D3 /* JCCollectionFooterView.m */; };
+		F316C1CE1E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F316C1C71E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework */; };
+		F316C1CF1E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F316C1C71E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F316C1D51E0BAD7E006375AE /* JCCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F316C1D41E0BAD7E006375AE /* JCCollectionViewWaterfallLayout.m */; };
+		F316C1D71E0BAD8B006375AE /* JCCollectionViewWaterfallLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F316C1D61E0BAD8B006375AE /* JCCollectionViewWaterfallLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,28 @@
 			remoteGlobalIDString = 6003F589195388D20070C39A;
 			remoteInfo = JCCollectionViewWaterfallLayout;
 		};
+		F316C1CC1E0BAD6C006375AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F316C1C61E0BAD6C006375AE;
+			remoteInfo = JCCollectionViewWaterfallLayout;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F316C1D31E0BAD6C006375AE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F316C1CF1E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		253F47A132ABC9DF0052E14F /* libPods-JCCollectionViewWaterfallLayout_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCCollectionViewWaterfallLayout_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +98,11 @@
 		F302E1DD1B205A6800C5F6D3 /* JCCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCollectionHeaderView.m; sourceTree = "<group>"; };
 		F302E1DF1B205A7C00C5F6D3 /* JCCollectionFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCollectionFooterView.h; sourceTree = "<group>"; };
 		F302E1E01B205A7C00C5F6D3 /* JCCollectionFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCollectionFooterView.m; sourceTree = "<group>"; };
+		F316C1C71E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JCCollectionViewWaterfallLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F316C1C91E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		F316C1CA1E0BAD6C006375AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F316C1D41E0BAD7E006375AE /* JCCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JCCollectionViewWaterfallLayout.m; path = ../Pod/Classes/JCCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		F316C1D61E0BAD8B006375AE /* JCCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JCCollectionViewWaterfallLayout.h; path = ../Pod/Classes/JCCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
 		FB186DD118A67E0A498E8E06 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +115,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				172A7F8B585A4C632EAE04D0 /* libPods-JCCollectionViewWaterfallLayout_Example.a in Frameworks */,
+				F316C1CE1E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,15 +130,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F316C1C31E0BAD6C006375AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				F316C1D81E0BB105006375AE /* For Carthage */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example */,
 				6003F5B5195388D20070C39A /* Tests */,
+				F316C1C81E0BAD6C006375AE /* JCCollectionViewWaterfallLayout */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				D175C2ACF2D3B18D073C4114 /* Pods */,
@@ -119,6 +159,7 @@
 			children = (
 				6003F58A195388D20070C39A /* JCCollectionViewWaterfallLayout_Example.app */,
 				6003F5AE195388D20070C39A /* JCCollectionViewWaterfallLayout_Tests.xctest */,
+				F316C1C71E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,7 +249,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F316C1C81E0BAD6C006375AE /* JCCollectionViewWaterfallLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F316C1C91E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.h */,
+				F316C1CA1E0BAD6C006375AE /* Info.plist */,
+			);
+			path = JCCollectionViewWaterfallLayout;
+			sourceTree = "<group>";
+		};
+		F316C1D81E0BB105006375AE /* For Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				F316C1D61E0BAD8B006375AE /* JCCollectionViewWaterfallLayout.h */,
+				F316C1D41E0BAD7E006375AE /* JCCollectionViewWaterfallLayout.m */,
+			);
+			name = "For Carthage";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F316C1C41E0BAD6C006375AE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F316C1D71E0BAD8B006375AE /* JCCollectionViewWaterfallLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		6003F589195388D20070C39A /* JCCollectionViewWaterfallLayout_Example */ = {
@@ -221,10 +291,12 @@
 				6003F588195388D20070C39A /* Resources */,
 				E639BBBC31AA8533D25E1C7B /* [CP] Embed Pods Frameworks */,
 				AFC019B0FEFE2900C130DA1B /* [CP] Copy Pods Resources */,
+				F316C1D31E0BAD6C006375AE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F316C1CD1E0BAD6C006375AE /* PBXTargetDependency */,
 			);
 			name = JCCollectionViewWaterfallLayout_Example;
 			productName = JCCollectionViewWaterfallLayout;
@@ -252,6 +324,24 @@
 			productReference = 6003F5AE195388D20070C39A /* JCCollectionViewWaterfallLayout_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F316C1C61E0BAD6C006375AE /* JCCollectionViewWaterfallLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F316C1D21E0BAD6C006375AE /* Build configuration list for PBXNativeTarget "JCCollectionViewWaterfallLayout" */;
+			buildPhases = (
+				F316C1C21E0BAD6C006375AE /* Sources */,
+				F316C1C31E0BAD6C006375AE /* Frameworks */,
+				F316C1C41E0BAD6C006375AE /* Headers */,
+				F316C1C51E0BAD6C006375AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JCCollectionViewWaterfallLayout;
+			productName = JCCollectionViewWaterfallLayout;
+			productReference = F316C1C71E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,6 +354,10 @@
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
+					};
+					F316C1C61E0BAD6C006375AE = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -282,6 +376,7 @@
 			targets = (
 				6003F589195388D20070C39A /* JCCollectionViewWaterfallLayout_Example */,
 				6003F5AD195388D20070C39A /* JCCollectionViewWaterfallLayout_Tests */,
+				F316C1C61E0BAD6C006375AE /* JCCollectionViewWaterfallLayout */,
 			);
 		};
 /* End PBXProject section */
@@ -302,6 +397,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F316C1C51E0BAD6C006375AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +524,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F316C1C21E0BAD6C006375AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F316C1D51E0BAD7E006375AE /* JCCollectionViewWaterfallLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -429,6 +539,11 @@
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* JCCollectionViewWaterfallLayout_Example */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+		F316C1CD1E0BAD6C006375AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F316C1C61E0BAD6C006375AE /* JCCollectionViewWaterfallLayout */;
+			targetProxy = F316C1CC1E0BAD6C006375AE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -544,6 +659,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCCollectionViewWaterfallLayout/JCCollectionViewWaterfallLayout-Prefix.pch";
 				INFOPLIST_FILE = "JCCollectionViewWaterfallLayout/JCCollectionViewWaterfallLayout-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -561,6 +677,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCCollectionViewWaterfallLayout/JCCollectionViewWaterfallLayout-Prefix.pch";
 				INFOPLIST_FILE = "JCCollectionViewWaterfallLayout/JCCollectionViewWaterfallLayout-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -611,6 +728,57 @@
 			};
 			name = Release;
 		};
+		F316C1D01E0BAD6C006375AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JCCollectionViewWaterfallLayout/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljc.JCCollectionViewWaterfallLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F316C1D11E0BAD6C006375AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = JCCollectionViewWaterfallLayout/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljc.JCCollectionViewWaterfallLayout;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -640,6 +808,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F316C1D21E0BAD6C006375AE /* Build configuration list for PBXNativeTarget "JCCollectionViewWaterfallLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F316C1D01E0BAD6C006375AE /* Debug */,
+				F316C1D11E0BAD6C006375AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
