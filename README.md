@@ -12,7 +12,17 @@ Support multiple section, and can add headerView and footerView.
 
 ## Installation
 
-pod "JCCollectionViewWaterfallLayout"
+Installation with CocoaPods
+
+```
+pod "JCCollectionViewWaterfallLayout", "1.0.0"
+```
+
+Installation with Carthage
+
+```
+github "lijingcheng/JCCollectionViewWaterfallLayout" ~> 1.0.0
+```
 
 ## Usage
 
