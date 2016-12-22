@@ -28,8 +28,8 @@
 		F302E1E11B205A7C00C5F6D3 /* JCCollectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F302E1E01B205A7C00C5F6D3 /* JCCollectionFooterView.m */; };
 		F316C1CE1E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F316C1C71E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework */; };
 		F316C1CF1E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F316C1C71E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F316C1D51E0BAD7E006375AE /* JCCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F316C1D41E0BAD7E006375AE /* JCCollectionViewWaterfallLayout.m */; };
-		F316C1D71E0BAD8B006375AE /* JCCollectionViewWaterfallLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F316C1D61E0BAD8B006375AE /* JCCollectionViewWaterfallLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F316C28C1E0BE127006375AE /* JCCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F316C28B1E0BE127006375AE /* JCCollectionViewWaterfallLayout.m */; };
+		F316C28E1E0BE131006375AE /* JCCollectionViewWaterfallLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F316C28D1E0BE131006375AE /* JCCollectionViewWaterfallLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,10 +99,9 @@
 		F302E1DF1B205A7C00C5F6D3 /* JCCollectionFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCollectionFooterView.h; sourceTree = "<group>"; };
 		F302E1E01B205A7C00C5F6D3 /* JCCollectionFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCollectionFooterView.m; sourceTree = "<group>"; };
 		F316C1C71E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JCCollectionViewWaterfallLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F316C1C91E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
 		F316C1CA1E0BAD6C006375AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F316C1D41E0BAD7E006375AE /* JCCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JCCollectionViewWaterfallLayout.m; path = ../Pod/Classes/JCCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
-		F316C1D61E0BAD8B006375AE /* JCCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JCCollectionViewWaterfallLayout.h; path = ../Pod/Classes/JCCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		F316C28B1E0BE127006375AE /* JCCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JCCollectionViewWaterfallLayout.m; path = ../../Pod/Classes/JCCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		F316C28D1E0BE131006375AE /* JCCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JCCollectionViewWaterfallLayout.h; path = ../../Pod/Classes/JCCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
 		FB186DD118A67E0A498E8E06 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,11 +142,10 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				F316C1D81E0BB105006375AE /* For Carthage */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example */,
 				6003F5B5195388D20070C39A /* Tests */,
-				F316C1C81E0BAD6C006375AE /* JCCollectionViewWaterfallLayout */,
+				F316C1C81E0BAD6C006375AE /* JCCollectionViewWaterfallLayout for Carthage */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				D175C2ACF2D3B18D073C4114 /* Pods */,
@@ -249,22 +247,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F316C1C81E0BAD6C006375AE /* JCCollectionViewWaterfallLayout */ = {
+		F316C1C81E0BAD6C006375AE /* JCCollectionViewWaterfallLayout for Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				F316C1C91E0BAD6C006375AE /* JCCollectionViewWaterfallLayout.h */,
+				F316C28D1E0BE131006375AE /* JCCollectionViewWaterfallLayout.h */,
+				F316C28B1E0BE127006375AE /* JCCollectionViewWaterfallLayout.m */,
 				F316C1CA1E0BAD6C006375AE /* Info.plist */,
 			);
+			name = "JCCollectionViewWaterfallLayout for Carthage";
 			path = JCCollectionViewWaterfallLayout;
-			sourceTree = "<group>";
-		};
-		F316C1D81E0BB105006375AE /* For Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				F316C1D61E0BAD8B006375AE /* JCCollectionViewWaterfallLayout.h */,
-				F316C1D41E0BAD7E006375AE /* JCCollectionViewWaterfallLayout.m */,
-			);
-			name = "For Carthage";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +265,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F316C1D71E0BAD8B006375AE /* JCCollectionViewWaterfallLayout.h in Headers */,
+				F316C28E1E0BE131006375AE /* JCCollectionViewWaterfallLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F316C1D51E0BAD7E006375AE /* JCCollectionViewWaterfallLayout.m in Sources */,
+				F316C28C1E0BE127006375AE /* JCCollectionViewWaterfallLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,6 +807,7 @@
 				F316C1D11E0BAD6C006375AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
